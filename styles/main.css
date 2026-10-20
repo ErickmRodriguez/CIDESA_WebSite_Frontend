@@ -1,0 +1,12 @@
+/* Punto de entrada único. El navegador resuelve @imports en paralelo. */
+@import "./base/_variables.css";
+@import "./base/_reset.css";
+@import "./base/_typography.css";
+@import "./layout/_grid.css";
+@import "./layout/_header.css";
+@import "./layout/_footer.css";
+@import "./layout/_sections.css";
+@import "./components/_buttons.css";
+@import "./components/_cards.css";
+@import "./components/_forms.css";
+@import "./components/_gallery.css";

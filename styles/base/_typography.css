@@ -1,0 +1,20 @@
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: var(--lh-tight);
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+h1 { font-size: var(--fs-hero); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+
+.text-accent { color: var(--color-accent); }
