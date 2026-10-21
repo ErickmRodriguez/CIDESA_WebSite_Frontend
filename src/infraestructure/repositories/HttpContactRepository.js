@@ -1,5 +1,5 @@
 import { ContactRepository } from "../../domain/repositories/ContactRepository.js";
-import { httpClient } from "../http/httpClient.js";
+import { httpClient } from "../http/HttpClient.js";
 import { appConfig } from "../../config/appConfig.js";
 
 export class HttpContactRepository extends ContactRepository {
