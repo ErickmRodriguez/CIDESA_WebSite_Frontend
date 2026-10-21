@@ -1,24 +1,41 @@
+import { projectCardTemplate } from "../templates/galleryTemplates";
+import { qs, delegate } from "../../infraestructure/dom/domHelpers";
+
 export class GalleryView {
   #gridEl;
   #emptyEl;
   #filtersEl;
+  #factory;
   #onFilterChange = null;
 
-  constructor(rootSelector = "#proyectos") {
-    const root = document.querySelector(rootSelector);
-    if (!root) throw new Error("Gallery root no encontrado");
+  constructor({ rootSelector = "#proyectos", componentFactory }) {
+    const root = qs(rootSelector);
 
-    this.#gridEl    = root.querySelector('[data-role="gallery-grid"]');
-    this.#emptyEl   = root.querySelector('[data-role="gallery-empty"]');
-    this.#filtersEl = root.querySelector('[data-role="gallery-filters"]');
+    if (!root) throw new Error(`GalleryView: raíz ${rootSelector} no encontrada`);
+
+    this.#gridEl    = qs('[data-role="gallery-grid"]', root);
+    this.#emptyEl   = qs('[data-role="gallery-empty"]', root);
+    this.#filtersEl = qs('[data-role="gallery-filters"]', root);
+    this.#factory = componentFactory;
+  }
+
+  renderFilters(filters, activeFilter) {
+    this.#filtersEl.innerHTML = "";
+    filters.forEach(f => {
+      this.#filtersEl.appendChild(
+        this.#factory.createFilterButton({
+          label: f.label,
+          filter: f.filter,
+          active: f.filter === activeFilter,
+        })
+      );
+    });
   }
 
   /** Registra el handler externo del filtro (lo llama el Controller). */
   bindFilterChange(handler) {
     this.#onFilterChange = handler;
-    this.#filtersEl.addEventListener("click", (e) => {
-      const btn = e.target.closest(".filter-btn");
-      if (!btn) return;
+    delegate(this.#filtersEl, "click", ".filter-btn", (_e, btn) => {
       const filter = btn.dataset.filter;
       this.#setActiveFilter(filter);
       this.#onFilterChange?.(filter);
@@ -28,7 +45,8 @@ export class GalleryView {
   #setActiveFilter(filter) {
     this.#filtersEl
       .querySelectorAll(".filter-btn")
-      .forEach(b => b.classList.toggle("is-active", b.dataset.filter === filter));
+      .forEach(btn => {btn.classList.toggle("is-active", btn.dataset.filter === filter);
+      });
   }
 
   render(projects) {
@@ -38,21 +56,6 @@ export class GalleryView {
       return;
     }
     this.#emptyEl.hidden = true;
-    this.#gridEl.innerHTML = projects.map(this.#projectCardTemplate).join("");
-  }
-
-  /** Template aislado — fácil de testear o mover a templates/. */
-  #projectCardTemplate(project) {
-    return `
-      <article class="project-card" data-id="${project.id}">
-        <figure class="project-card__media">
-          <img src="${project.image}" alt="${project.title}" loading="lazy" width="400" height="300" />
-        </figure>
-        <div class="project-card__body">
-          <h3 class="project-card__title">${project.title}</h3>
-          <p class="project-card__category">${project.category}</p>
-        </div>
-      </article>
-    `;
+    this.#gridEl.innerHTML = projects.map(projectCardTemplate).join("");
   }
 }

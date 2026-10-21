@@ -1,9 +1,11 @@
+import { appConfig } from "../../config/appConfig";
+
 export class GalleryController {
   #view;
   #getProjects;
   #filterProjects;
   #allProjects = [];
-  #currentFilter = "all";
+  #currentFilter = appConfig.gallery.defaultFilter;
 
   constructor({ view, getProjectsUseCase, filterProjectsUseCase }) {
     this.#view = view;
@@ -21,6 +23,10 @@ export class GalleryController {
     }
   }
 
+  renderFilters() {
+    this.#view.renderFilters(appConfig.gallery.filters, this.#currentFilter);
+  }
+  
   #handleFilter(filter) {
     this.#currentFilter = filter;
     const visible = this.#filterProjects.execute(this.#allProjects, filter);
