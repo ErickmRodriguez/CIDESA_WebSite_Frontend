@@ -52,7 +52,7 @@ galleryController.init();
 
 // Render inicial de los botones de filtro (los crea la factory).
 qs('[data-role="gallery-filters"]'); // garantiza que exista antes del bind
-galleryController.renderFilters?.(appConfig.gallery);
+//galleryController.renderFilters?.(appConfig.gallery);
 
 /* ---------- Formulario de Contacto (MVC) ---------- */
 const contactRepository = new HttpContactRepository();
