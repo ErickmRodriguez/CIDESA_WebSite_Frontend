@@ -7,10 +7,10 @@ import { ProjectRepository } from "../../domain/repositories/ProjectRepository.j
  */
 export class InMemoryProjectRepository extends ProjectRepository {
   #data = [
-    { id: 1, title: "Planta Industrial Norte", category: "industrial", image: "assets/images/projects/p1.jpg" },
-    { id: 2, title: "Centro Comercial Aurora", category: "comercial",  image: "assets/images/projects/p2.jpg" },
+    { id: 1, title: "Lotificacion playa Gigante", category: "lotificacion", image: "assets/images/projects/playaGigante.jpg" },
+    /** { id: 2, title: "Centro Comercial Aurora", category: "comercial",  image: "assets/images/projects/p2.jpg" },
     { id: 3, title: "Residencial Los Pinos",  category: "residencial",image: "assets/images/projects/p3.jpg" },
-    { id: 4, title: "Nave Logística Sur",     category: "industrial", image: "assets/images/projects/p4.jpg" },
+    { id: 4, title: "Nave Logística Sur",     category: "industrial", image: "assets/images/projects/p4.jpg" },**/
   ];
 
   async getAll() {
