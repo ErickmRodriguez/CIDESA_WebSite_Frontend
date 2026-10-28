@@ -9,7 +9,7 @@ export const appConfig = Object.freeze({
     defaultFilter: "all",
     filters: [
       { filter: "all",         label: "Todos" },
-      { filter: "industrial",  label: "Industrial" },
+      { filter: "lotificacion",  label: "Lotificación" },
       { filter: "comercial",   label: "Comercial" },
       { filter: "residencial", label: "Residencial" },
     ],

@@ -7,20 +7,20 @@ import { Service } from "./domain/models/Service.js";
 /* ============ Application ============ */
 import { GetProjectsUseCase }        from "./application/useCases/GetProjectsUseCase.js";
 import { FilterProjectsUseCase }     from "./application/useCases/FilterProjectsUseCase.js";
-import { SendContactMessageUseCase } from "./application/useCases/SendContactMessageUseCase.js";
-import { ValidatorService }          from "./application/services/ValidatorService.js";
+//import { SendContactMessageUseCase } from "./application/useCases/SendContactMessageUseCase.js";
+//import { ValidatorService }          from "./application/services/ValidatorService.js";
 
 /* ============ Infrastructure ============ */
-import { InMemoryProjectRepository } from "./infrastructure/repositories/InMemoryProjectRepository.js";
-import { HttpContactRepository }     from "./infrastructure/repositories/HttpContactRepository.js";
-import { qs }                        from "./infrastructure/dom/domHelpers.js";
+import { InMemoryProjectRepository } from "./infraestructure/repositories/InMemoryProjectRepository.js";
+//import { HttpContactRepository }     from "./infrastructure/repositories/HttpContactRepository.js";
+import { qs }                        from "./infraestructure/dom/domHelpers.js";
 
 /* ============ Presentation ============ */
 import { ComponentFactory }          from "./presentation/components/ComponentFactory.js";
 import { GalleryView }               from "./presentation/views/GalleryView.js";
 import { GalleryController }         from "./presentation/controllers/GalleryController.js";
-import { ContactView }               from "./presentation/views/ContactView.js";
-import { ContactController }         from "./presentation/controllers/ContactController.js";
+//import { ContactView }               from "./presentation/views/ContactView.js";
+//import { ContactController }         from "./presentation/controllers/ContactController.js";
 
 /* =====================================================
    COMPOSITION ROOT — única capa que conoce todos los "new"
@@ -55,7 +55,7 @@ qs('[data-role="gallery-filters"]'); // garantiza que exista antes del bind
 //galleryController.renderFilters?.(appConfig.gallery);
 
 /* ---------- Formulario de Contacto (MVC) ---------- */
-const contactRepository = new HttpContactRepository();
+/*const contactRepository = new HttpContactRepository();
 const validatorService  = new ValidatorService();
 
 const contactController = new ContactController({
@@ -66,7 +66,7 @@ const contactController = new ContactController({
   }),
 });
 
-contactController.init();
+contactController.init();*/
 
 /* ---------- Detalle: año dinámico del footer ---------- */
 const yearEl = qs('[data-role="year"]');

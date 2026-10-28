@@ -1,4 +1,4 @@
-import { qs } from "../../infrastructure/dom/domHelpers.js";
+import { qs } from "../../infraestructure/dom/domHelpers.js";
 
 export class ContactView {
   #formEl;
