@@ -1,5 +1,5 @@
-import { projectCardTemplate } from "../templates/galleryTemplates";
-import { qs, delegate } from "../../infraestructure/dom/domHelpers";
+import { projectCardTemplate } from "../templates/galleryTemplates.js";
+import { qs, delegate } from "../../infraestructure/dom/domHelpers.js";
 
 export class GalleryView {
   #gridEl;
