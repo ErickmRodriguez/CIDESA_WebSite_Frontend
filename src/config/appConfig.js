@@ -9,9 +9,9 @@ export const appConfig = Object.freeze({
     defaultFilter: "all",
     filters: [
       { filter: "all",         label: "Todos" },
-      { filter: "lotificacion",  label: "Lotificación" },
-      { filter: "comercial",   label: "Comercial" },
-      { filter: "residencial", label: "Residencial" },
+      { filter: "inversion",  label: "Inversión" },
+      { filter: "obrasVerticales",   label: "Obras Verticales" },
+      { filter: "obrasHorizontales", label: "Obras Horizontales" },
     ],
   },
   services: [
