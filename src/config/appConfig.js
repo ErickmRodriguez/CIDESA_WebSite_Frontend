@@ -15,8 +15,7 @@ export const appConfig = Object.freeze({
     ],
   },
   services: [
-    { id: "s1", icon: "⚙️", title: "Consultoría",  description: "Asesoría estratégica personalizada." },
-    { id: "s2", icon: "🏗️", title: "Desarrollo",   description: "Soluciones llave en mano." },
-    { id: "s3", icon: "📈", title: "Optimización", description: "Mejora continua de procesos." },
+    { id: "s1", icon: "⚙️", title: "Construcción",  description: "Construcción, Inversión y Desarrollo S.A. (CIDESA) integra experiencia, dirección técnica, maquinaria y soporte administrativo para ejecutar proyectos de movimiento de tierra, drenaje, vialidad, urbanización, plataformas y obras civiles. Su propuesta combina planificación de producción, control geométrico, coordinación de equipos, gestión de materiales y seguimiento contractual." },
+    { id: "s2", icon: "🏗️", title: "Desarrollo",   description: "Impulsamos proyectos estratégicos de alta plusvalía. Adquiere lotes exclusivos en ubicaciones privilegiadas con espectaculares vistas al mar, ideales para construir tu futuro o asegurar tu inversión." },
   ],
 });
