@@ -37,6 +37,12 @@ export class InMemoryProjectRepository extends ProjectRepository {
     { id: 28, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS7.jpg"},
     { id: 29, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS8.jpg"},
     { id: 30, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS9.jpg"},
+    { id: 31, title: "Calle La Bolsa - Las Sierritas", category: "obrasHorizontales", image: "assets/images/projects/calle/BOLSA1.jpg"},
+    { id: 32, title: "Calle La Bolsa - Las Sierritas", category: "obrasHorizontales", image: "assets/images/projects/calle/BOLSA2.jpg"},
+    { id: 33, title: "Calle La Bolsa - Las Sierritas", category: "obrasHorizontales", image: "assets/images/projects/calle/BOLSA3.jpg"},
+    { id: 34, title: "Calle La Bolsa - Las Sierritas", category: "obrasHorizontales", image: "assets/images/projects/calle/BOLSA4.jpg"},
+    { id: 35, title: "Calle La Bolsa - Las Sierritas", category: "obrasHorizontales", image: "assets/images/projects/calle/BOLSA5.jpg"},
+    { id: 36, title: "Calle La Bolsa - Las Sierritas", category: "obrasHorizontales", image: "assets/images/projects/calle/BOLSA6.jpg"},
   ];
 
   async getAll() {
