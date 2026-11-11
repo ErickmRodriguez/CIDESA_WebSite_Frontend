@@ -27,8 +27,16 @@ export class InMemoryProjectRepository extends ProjectRepository {
     { id: 18, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS2.jpg"},
     { id: 19, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS3.jpg"},
     { id: 20, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS4.jpg"},
-    { id: 20, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS5.jpg"},
-    { id: 20, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS6.jpg"},
+    { id: 21, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS5.jpg"},
+    { id: 22, title: "Edificio ENTHEOS", category: "obrasVerticales", image: "assets/images/projects/entheos/EDIFICIO_ENTHEOS6.jpg"},
+    { id: 23, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS2.jpg"},
+    { id: 24, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS3.jpg"},
+    { id: 25, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS4.jpg"},
+    { id: 26, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS5.jpg"},
+    { id: 27, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS6.jpg"},
+    { id: 28, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS7.jpg"},
+    { id: 29, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS8.jpg"},
+    { id: 30, title: "Casa N° 1 Urbanización Las Cimas", category: "obrasVerticales", image: "assets/images/projects/casa_cimas/URB_CIMAS9.jpg"},
   ];
 
   async getAll() {
